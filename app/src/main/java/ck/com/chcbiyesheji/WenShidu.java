@@ -50,9 +50,16 @@ public class WenShidu extends Fragment{
         shidu=(TextView)view.findViewById(R.id.shiduxianshi);
 
         IPText.setText("192.168.1.212:2112");
-        lianjie();
+
         return view;
     }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        lianjie();
+    }
+
     private void lianjie(){
         if(isConnecting){
             isConnecting=false;
@@ -64,7 +71,6 @@ public class WenShidu extends Fragment{
 
                     mPrintWriterClient.close();
                     mPrintWriterClient = null;
-
                 }
             }catch (IOException e){
                 e.printStackTrace();
@@ -112,9 +118,7 @@ public class WenShidu extends Fragment{
                 mSocketClient = new Socket(sIP, port);	//portnum
                 //取得输入、输出流
                 mBufferedReaderClient = mSocketClient.getInputStream();
-
                 mPrintWriterClient = new PrintWriter(mSocketClient.getOutputStream(), true);
-
                 recvMessageClient = "connected to server!\n";//消息换行
                 Message msg = new Message();
                 msg.what = 1;
@@ -135,27 +139,14 @@ public class WenShidu extends Fragment{
             {
                 try
                 {
-
                     mBufferedReaderClient.read(buffer);
                     Message message = new Message(); // 通知界面
                     message.what = 2;
                     message.obj = buffer;
                     mHandler.sendMessage(message);
-
-//
-//					if(mBufferedReaderClient.read()==1)
-//					{
-//						Message msg = new Message(); // 通知界面
-//						msg.what = 3;
-//						msg.obj = buffer;
-//						mHandler.sendMessage(msg);
-//
-//					}
-
                 }
                 catch (Exception e)
                 {
-
                 }
             }
         }
@@ -182,8 +173,11 @@ public class WenShidu extends Fragment{
             shidu.setText("湿度:"+hum+"%");
         }
     };
-    public void onDestroy() {
-        super.onDestroy();
+
+
+    @Override
+    public void onPause() {
+        super.onPause();
         if (isConnecting)
         {
             isConnecting = false;
@@ -202,6 +196,5 @@ public class WenShidu extends Fragment{
             }
             mThreadClient.interrupt();
         }
-
     }
 }
