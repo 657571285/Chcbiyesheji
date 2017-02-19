@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Button
+        android:id="@+id/led1kaiguan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="63dp"
+        android:text="LED1开关" />
+
+    <Button
+        android:id="@+id/led2kaiguan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/led1kaiguan"
+        android:layout_alignBottom="@+id/led1kaiguan"
+        android:layout_alignParentRight="true"
+        android:text="LED2开关" />
+
+    <Button
+        android:id="@+id/led3kaiguan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/led1kaiguan"
+        android:layout_marginTop="49dp"
+        android:text="LED3开关" />
+
+    <Button
+        android:id="@+id/beerkaiguan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/led3kaiguan"
+        android:layout_alignBottom="@+id/led3kaiguan"
+        android:layout_alignParentRight="true"
+        android:text="蜂鸣器开关" />
+
+    <Button
+        android:id="@+id/diancisuokaiguan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/beerkaiguan"
+        android:layout_centerHorizontal="true"
+        android:text="电磁锁开关" />
+
+</RelativeLayout>

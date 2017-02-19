@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <EditText
+        android:id="@+id/main2ip"
+        android:layout_width="0.01dp"
+        android:layout_height="0.01dp" />
+
+    <TextView
+        android:id="@+id/wenduxianshi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="80dp"
+        android:text="温度"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/shiduxianshi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/wenduxianshi"
+        android:layout_alignBottom="@+id/wenduxianshi"
+        android:layout_alignParentRight="true"
+        android:text="湿度"
+        android:textSize="25sp"
+        />
+
+
+
+</RelativeLayout>

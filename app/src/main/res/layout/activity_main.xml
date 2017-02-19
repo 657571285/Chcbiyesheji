@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/sy"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#eeeeee">
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/shouye"
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+            android:id="@+id/wenshidu"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_marginTop="5dp"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/shouye_wendu"
+                android:layout_width="64px"
+                android:layout_height="64px"
+                android:src="@drawable/wendu"/>
+            <TextView
+                android:id="@+id/t1"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/shouye_wendu"
+                android:text="温湿度"
+                android:textSize="12dp"
+                android:textColor="#000000"/>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/kaiguan"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_marginTop="5dp"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/shouye_kaiguan"
+                android:layout_width="64px"
+                android:layout_height="64px"
+                android:src="@drawable/kaiguan"/>
+            <TextView
+                android:id="@+id/t2"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/shouye_kaiguan"
+                android:text="开关"
+                android:textSize="12dp"
+                android:textColor="#000000"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/grzx"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_marginTop="5dp"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/shouye_grzx"
+                android:layout_width="64px"
+                android:layout_height="64px"
+                android:src="@drawable/wode"/>
+            <TextView
+                android:id="@+id/t3"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/shouye_grzx"
+                android:text="个人中心"
+                android:textSize="12dp"
+                android:textColor="#000000"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

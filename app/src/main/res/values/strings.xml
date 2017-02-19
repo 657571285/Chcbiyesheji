@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Chcbiyesheji</string>
+    <drawable name="clr_normal">#87d7f0</drawable>
+    <drawable name="clr_pressed">#87d7f0</drawable>
+</resources>

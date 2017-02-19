@@ -1,0 +1,103 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+    <RelativeLayout
+        android:layout_margin="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/logoweizhi">
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="320px"
+            android:layout_height="310px"
+            android:src="@drawable/logo"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:layout_below="@id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="wifi通信设计"
+            android:textSize="20dp"
+            android:layout_centerHorizontal="true"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logoweizhi"
+        android:background="#ffffff">
+
+        <EditText
+            android:layout_marginLeft="20dp"
+            android:background="#ffffff"
+            android:id="@+id/yonghuming"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="          请输入用户名"
+            android:textColorHint="#eeeeee"
+            android:layout_marginBottom="10dp"
+            />
+        <View
+            android:id="@+id/xian"
+            android:layout_below="@+id/yonghuming"
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dip"
+            android:background="#eeeeee"/>
+        <EditText
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="20dp"
+            android:background="#ffffff"
+            android:textColorHint="#eeeeee"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/mima"
+            android:hint="           请输入密码"
+            android:layout_below="@id/xian"
+            android:inputType="textPassword"
+            />
+        <View
+            android:layout_marginTop="10dp"
+            android:id="@+id/xian2"
+            android:layout_below="@id/mima"
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dip"
+            android:background="#eeeeee"/>
+        <Button
+            android:id="@+id/denglu"
+            android:layout_marginTop="40dp"
+            android:layout_width="720px"
+
+            android:layout_height="wrap_content"
+            android:text="登录"
+            android:textColor="#ffffff"
+            android:textSize="20dp"
+            android:background="@drawable/login_button_selector"
+            android:layout_below="@+id/mima"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffff">
+        <Button
+            android:id="@+id/wangjimima"
+            android:layout_centerVertical="true"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+
+            android:layout_marginRight="20dp"
+            android:textColor="#ffffff"
+            android:text="忘记密码"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/login_button_selector"/>
+    </RelativeLayout>
+
+</RelativeLayout>
